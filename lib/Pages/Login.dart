@@ -33,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 SizedBox(
-                  height: constraints.maxHeight* 0.005,
+                  height: constraints.maxHeight* 0.02,
                 ),
                 Text(
                   'Welcome Back\nBookzy!',
@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 SizedBox(
-                  height: constraints.maxHeight* 0.005,
+                  height: constraints.maxHeight* 0.01,
                 ),
                 Center(
                   child: Container(

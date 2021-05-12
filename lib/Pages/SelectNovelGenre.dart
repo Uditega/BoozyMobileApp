@@ -7,6 +7,9 @@ class SelectNovelGenre extends StatefulWidget {
 }
 
 class _SelectNovelGenreState extends State<SelectNovelGenre> {
+
+  bool isSelected = true;
+
   List<String> novelNames = [
     'Adventure',
     'Action',
@@ -85,24 +88,32 @@ class _SelectNovelGenreState extends State<SelectNovelGenre> {
                     children: List.generate(
                       novelNames.length,
                       (index) {
-                        return Card(
-                          elevation: 0,
-                          color: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            side: BorderSide(color: Colors.black),
-                            borderRadius: BorderRadius.circular(20.0),
-                          ),
-                          child: FittedBox(
-                            fit: BoxFit.scaleDown,
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 6, vertical: 3),
-                              child: Text(
-                                novelNames[index],
-                                style: TextStyle(
-                                  fontFamily: 'Suravaram',
-                                  fontSize: 15.0,
-                                  color: Colors.black87,
+                        return GestureDetector(
+                          behavior: HitTestBehavior.opaque,
+                          onTap: (){
+                            setState(() {
+                              isSelected = !isSelected ;
+                            });
+                          },
+                          child: Card(
+                            elevation: 0,
+                            color: isSelected? Colors.white :HexColor("#72b2ed"),
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(color: isSelected? Colors.black : HexColor("#72b2ed")),
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            child: FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Padding(
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 6, vertical: 3),
+                                child: Text(
+                                  novelNames[index],
+                                  style: TextStyle(
+                                    fontFamily: 'Suravaram',
+                                    fontSize: 15.0,
+                                    color: isSelected? Colors.black87: Colors.white,
+                                  ),
                                 ),
                               ),
                             ),

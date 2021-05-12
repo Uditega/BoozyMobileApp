@@ -31,7 +31,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   ),
                 ),
                 SizedBox(
-                  height: constraints.maxHeight* 0.005,
+                  height: constraints.maxHeight* 0.01,
                 ),
                 Text(
                   'Create Account',
@@ -76,7 +76,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   ),
                 ),
                 SizedBox(
-                  height: constraints.maxHeight* 0.005,
+                  height: constraints.maxHeight* 0.01,
                 ),
                 Center(
                   child: Container(
