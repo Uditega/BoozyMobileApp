@@ -285,7 +285,7 @@ class _CreateAccountState extends State<CreateAccount> {
                   children: [
                     GestureDetector(
                       behavior: HitTestBehavior.opaque,
-                      onTap: (){
+                      onTap: () {
                         Navigator.pushNamed(context, '/Login');
                       },
                       child: Text(

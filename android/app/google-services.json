@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "945294766085",
+    "project_id": "bookzy-f955a",
+    "storage_bucket": "bookzy-f955a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945294766085:android:cce38294538d26ede56c6c",
+        "android_client_info": {
+          "package_name": "com.bookzy.bookzy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945294766085-7ncr553lo0hbpm4b5vnceo9b8prj6a21.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bookzy.bookzy",
+            "certificate_hash": "927fd0585acf85ae477fb16005198c9298bccf19"
+          }
+        },
+        {
+          "client_id": "945294766085-7acsd1mdmsegqs7c1ttuosp38pobp5g3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK_xKqDVGOk93Z1X39kSlLzwCbDqcaWJs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945294766085-7acsd1mdmsegqs7c1ttuosp38pobp5g3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

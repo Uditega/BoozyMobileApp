@@ -1,7 +1,10 @@
 import 'package:bookzy/Pages/CreateAccount.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'dart:async';
+
+import 'package:provider/provider.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -24,6 +27,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+    final user = Provider.of<User>(context);
+    print(user);
 
     return LayoutBuilder(builder: (ctx, constraints){
       return Scaffold(

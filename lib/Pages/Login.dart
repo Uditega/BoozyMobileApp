@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:bookzy/Services/Auth.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -10,7 +11,7 @@ class _LoginPageState extends State<LoginPage> {
 
   bool _passwordVisible = false;
 
-
+  final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
 
@@ -260,8 +261,15 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 GestureDetector(
                   behavior: HitTestBehavior.opaque,
-                  onTap: (){
-                    Navigator.pushNamed(context, '/SelectNovelGenre');
+                  onTap: () async{
+                    dynamic result = await _auth.SignInAnonymously();
+                    if(result == null){
+                      print('User not logged in');
+                    }else{
+                      print('Signed in');
+                      print(result.uid);
+                    }
+                    // Navigator.pushNamed(context, '/SelectNovelGenre');
                   },
                   child: Container(
                     width: constraints.maxWidth * 1,
